@@ -26,7 +26,7 @@ function Login() {
       alert(`Login Successful! Welcome ${res.data.user.name}`);
 
       // save token in LS maybe later since  I am building a quick MVP, LS for speed
-      // localStorage.setItem("token", res.data.token); // dont need it now but good idea i.e token get stored in localstorage and user is redirected to /profile , protected pages check the token and then will have to add a logout button
+       localStorage.setItem("token", res.data.token); // dont need it now but good idea i.e token get stored in localstorage and user is redirected to /profile , protected pages check the token and then will have to add a logout button
 
       // redirect to profile page or wherever
       window.location.href = "/profile"; // no actual profile page yet

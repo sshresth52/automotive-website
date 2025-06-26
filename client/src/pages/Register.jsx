@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-// lol regestration page
+// lol registration page
 function Register() {
   const [form, setForm] = useState({
     name: "",

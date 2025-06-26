@@ -9,11 +9,12 @@ const PORT = process.env.PORT || 5000;
 // Middlewares
 app.use(cors());//it allows frontend to communicate with the backend without security blocks
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: true }));//for forms
 // Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/inquiry", require("./routes/inquiry"));
 app.use("/api/vehicles", require("./routes/vehicles"));
+
 
 
 // MongoDB connection
@@ -24,3 +25,5 @@ mongoose
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch((err) => console.error("MongoDB error:", err));
+
+  

@@ -1,7 +1,7 @@
 const vehicles = [
   {
     id: 1,
-    name: "Toyota Camry 2022",
+    title: "Toyota Camry 2022",
     price: "$24,000",
     fuel: "Petrol",
     transmission: "Automatic",
@@ -9,7 +9,7 @@ const vehicles = [
   },
   {
     id: 2,
-    name: "Honda Civic 2021",
+    title: "Honda Civic 2021",
     price: "$21,500",
     fuel: "Petrol",
     transmission: "Manual",
@@ -17,7 +17,7 @@ const vehicles = [
   },
   {
     id: 3,
-    name: "Tesla Model 3",
+    title: "Tesla Model 3",
     price: "$37,000",
     fuel: "Electric",
     transmission: "Automatic",
