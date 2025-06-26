@@ -1,13 +1,13 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const mongoose = require("mongoose");//handles connectio to mongoDB and interacts with the database
 const cors = require("cors");
 require("dotenv").config();
 
-const app = express();
+const app = express();//sets up the server and handles routes, requests and responses
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-app.use(cors());
+app.use(cors());//it allows frontend to communicate with the backend without security blocks
 app.use(express.json());
 
 // Routes
@@ -18,7 +18,7 @@ app.use("/api/vehicles", require("./routes/vehicles"));
 
 // MongoDB connection
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI)//this triggers the connection to MongoDB via Mongoose
   .then(() => {
     console.log("MongoDB connected");
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

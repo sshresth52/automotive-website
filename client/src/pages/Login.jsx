@@ -25,13 +25,13 @@ function Login() {
 
       alert(`Login Successful! Welcome ${res.data.user.name}`);
 
-      // save token in LS maybe later
-      // localStorage.setItem("token", res.data.token); // dont need it now but good idea
+      // save token in LS maybe later since  I am building a quick MVP, LS for speed
+      // localStorage.setItem("token", res.data.token); // dont need it now but good idea i.e token get stored in localstorage and user is redirected to /profile , protected pages check the token and then will have to add a logout button
 
       // redirect to profile page or wherever
       window.location.href = "/profile"; // no actual profile page yet
     } catch (err) {
-      console.log("Login failed 🥲");
+      console.log("Login failed");
       alert(err.response?.data?.message || "Login failed");
     }
   };

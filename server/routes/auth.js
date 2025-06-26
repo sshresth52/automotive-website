@@ -24,7 +24,7 @@ router.post("/register", async (req, res) => {
     await newUser.save();
 
     // user added.
-    res.status(201).json({ message: "User regestration went thru!" });
+    res.status(201).json({ message: "User registration went thru!" });
   } catch (error) {
     console.error("regestration failed hard:", error);
     res
